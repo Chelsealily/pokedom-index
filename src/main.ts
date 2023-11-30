@@ -19,6 +19,7 @@ console.log(pokemonArray)
         <p class="card__text">${pokemon.name} #${pokemon.id} is a ${pokemon.types.join(" & ")} type pokemon.</p>
       </div>`
   }
-
-  card.innerHTML = showCards(pokemonArray[0]);
  
+  pokemonArray.forEach((pokemon) => {
+    card.innerHTML += showCards(pokemon);
+  });
